@@ -1,0 +1,95 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+  font-family: var(--font-family-english);
+  display: inline-block;
+  background-color: var(--color-bg-black);
+  padding: 8px 16px;
+  color: var(--color-font-white);
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  @include g.mq() {
+    font-size: 18px;
+  }
+
+  &--size-medium {
+    width: 100%;
+    max-width: 220px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    @include g.mq() {
+      max-width: 240px;
+      height: 60px;
+    }
+  }
+
+  &--size-small {
+    width: 100%;
+    max-width: 155px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    @include g.mq() {
+      max-width: 230px;
+      height: 55px;
+    }
+  }
+
+  &--white {
+    background-color: var(--color-bg-white);
+    color: var(--color-font-base);
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--round {
+    font-size: 16px;
+    width: 100%;
+    max-width: 220px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    @include g.mq() {
+      max-width: 240px;
+      height: 55px;
+    }
+    border-radius: 100vh;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-font-base);
+  }
+
+  &--accent-white::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: var(--color-bg-white);
+    position: absolute;
+    right: 0;
+    @include g.mq() {
+      width: 28px;
+    }
+  }
+
+  &--accent-black::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: var(--color-bg-black);
+    position: absolute;
+    right: 0;
+    @include g.mq() {
+      width: 28px;
+    }
+  }
+}

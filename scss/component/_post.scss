@@ -1,0 +1,36 @@
+@use "../global" as g;
+
+/*!
+component > post
+------------------------------
+*/
+
+.c-post-thumbnail {
+  img {
+    aspect-ratio: 324 / 324;
+    object-fit: cover;
+  }
+}
+
+.c-post-title {
+  font-size: 18px;
+  line-height: 1.55;
+  margin-top: 8px;
+  @include g.mq() {
+    font-size: 22px;
+  }
+}
+
+.c-date {
+  font-family: var(--font-family-english);
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  margin-top: 16px;
+
+  @include g.mq() {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}

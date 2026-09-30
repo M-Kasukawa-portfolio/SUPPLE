@@ -1,0 +1,20 @@
+@use "../../global" as g;
+
+/*!
+page > blog_archive
+------------------------------
+*/
+.blog-kv {
+  background-image: url(../img/bg-blog-kv-sp.jpg);
+  @include g.mq() {
+    background-image: url(../img/bg-blog-kv.jpg);
+  }
+}
+
+.blognews-contents {
+  @include g.mq() {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

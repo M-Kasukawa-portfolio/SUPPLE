@@ -1,0 +1,15 @@
+@use "../global" as g;
+
+/*!
+layout > article
+------------------------------
+*/
+
+// 余白関連
+.l-article {
+  padding: 64px 0 !important;
+
+  @include g.mq() {
+    padding: 80px 0 !important;
+  }
+}

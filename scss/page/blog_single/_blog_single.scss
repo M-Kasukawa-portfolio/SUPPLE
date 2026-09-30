@@ -1,0 +1,36 @@
+@use "../../global" as g;
+
+/*!
+page > blog_archive
+------------------------------
+*/
+.blognews-contents {
+  @include g.mq() {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.blognews-contents-date {
+  @include g.mq() {
+    margin-top: 24px;
+  }
+}
+.blognews-contents-title {
+  margin-top: 4px;
+}
+
+.blognews-text {
+  margin-top: 40px;
+  @include g.mq() {
+    margin-top: 48px;
+  }
+
+  p:not(:first-child) {
+    margin-top: 32px;
+    @include g.mq() {
+      margin-top: 40px;
+    }
+  }
+}

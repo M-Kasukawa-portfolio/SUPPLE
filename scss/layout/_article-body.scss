@@ -1,0 +1,14 @@
+@use "../global" as g;
+
+/*!
+layout > article-body
+------------------------------
+*/
+
+.l-article-body {
+  margin: 40px 0 !important;
+
+  @include g.mq() {
+    margin: 48px 0 !important;
+  }
+}

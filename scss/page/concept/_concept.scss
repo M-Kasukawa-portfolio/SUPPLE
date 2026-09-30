@@ -1,0 +1,26 @@
+@use "../../global" as g;
+
+/*!
+page > concept
+------------------------------
+*/
+.concept-kv {
+  background-image: url(../img/bg-concept-kv-sp.jpg);
+  @include g.mq() {
+    background-image: url(../img/bg-concept-kv.jpg);
+  }
+}
+
+.concept-lead {
+  text-align: center;
+  margin-top: 24px;
+  @include g.mq() {
+    margin-top: 32px;
+  }
+
+  span {
+    @include g.mq() {
+      display: block;
+    }
+  }
+}

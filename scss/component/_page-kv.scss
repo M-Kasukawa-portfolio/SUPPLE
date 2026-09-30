@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+/*!
+component > page-kv
+------------------------------
+*/
+.c-page-kv {
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 360/180;
+  display: flex;
+  align-items: center;
+  @include g.mq() {
+    aspect-ratio: 1366/460;
+  }
+}

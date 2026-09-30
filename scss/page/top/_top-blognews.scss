@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-blog&shop
+------------------------------
+*/
+.top-blognews-inner {
+  margin: 40px 0;
+  @include g.mq() {
+    width: 100%;
+    max-width: 960px;
+    margin: 48px auto;
+  }
+}

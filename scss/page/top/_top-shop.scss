@@ -1,0 +1,45 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-shop
+------------------------------
+*/
+
+.top-shop-text {
+  margin-top: 40px;
+  text-align: center;
+  @include g.mq() {
+    margin-top: 48px;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.top-shop-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 155px);
+  justify-content: center;
+  gap: 16px 14px;
+
+  @include g.mq() {
+    margin-top: 48px;
+    grid-template-columns: repeat(2, 230px);
+    gap: 24px;
+  }
+
+  @include g.mq(lg) {
+    grid-template-columns: repeat(3, 230px);
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+.top-shop-button {
+  margin-top: 40px;
+  @include g.mq() {
+    margin-top: 48px;
+  }
+}

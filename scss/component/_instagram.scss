@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+/*!
+component > instagram
+------------------------------
+*/
+
+.c-instagram {
+  background-color: var(--color-bg-secondary);
+}
+
+.c-instagram-posts {
+  margin: 40px 0;
+  display: grid;
+  gap: 8px 9px;
+  grid-template-columns: repeat(3, 1fr);
+  @include g.mq() {
+    margin: 48px 0;
+  }
+
+  &--col6 {
+    @include g.mq(lg) {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 32px;
+    }
+  }
+}

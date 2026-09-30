@@ -1,0 +1,83 @@
+@use "../../global" as g;
+
+/*!
+page > shoplist
+------------------------------
+*/
+.shoplist-kv {
+  background-image: url(../img/bg-shoplist-kv-sp.jpg);
+  @include g.mq() {
+    background-image: url(../img/bg-shoplist-kv.jpg);
+  }
+}
+
+.shop-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+
+  @include g.mq() {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 100px;
+  }
+}
+
+.shop-item {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+
+    @include g.mq(lg) {
+      display: grid;
+      grid-template-columns: 285px auto;
+      gap: 24px;
+    }
+  }
+}
+
+.shop-item-img {
+  width: 100%;
+}
+
+.shop-item-body {
+  @include g.mq() {
+    align-content: center;
+  }
+}
+
+.shop-item-title {
+  margin-top: 16px;
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
+.shop-address,
+.shop-time {
+  font-size: 12px;
+  line-height: 1.55;
+  margin-top: 4px;
+
+  @include g.mq() {
+    font-size: 14px;
+  }
+}
+
+.shop-tel {
+  font-size: 18px;
+  line-height: 1.55;
+  margin-top: 4px;
+  @include g.mq() {
+    font-size: 22px;
+  }
+}
+
+.shop-item-text {
+  font-size: 12px;
+  line-height: 1.55;
+  margin-top: 4px;
+  @include g.mq() {
+    font-size: 14px;
+  }
+}

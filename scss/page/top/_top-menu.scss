@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-menu
+------------------------------
+*/
+
+.top-menu {
+  height: 1046px;
+  background-image: url(../img/bg-top-menu.jpg);
+  background-position: center;
+  background-size: cover;
+  @include g.mq() {
+    height: 712px;
+  }
+}
+
+.top-menu-body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @include g.mq() {
+    flex-direction: row;
+  }
+}
+
+.top-menu-drip,
+.top-menu-espresso {
+  @include g.mq() {
+    flex-grow: 1;
+  }
+}
+
+.top-menu-list {
+  margin-top: 8px;
+}
+
+.top-menu-item {
+  color: var(--color-font-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border-white);
+}
+
+.top-menu-price {
+  font-size: 16px;
+  line-height: 2;
+}
